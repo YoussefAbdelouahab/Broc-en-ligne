@@ -1,0 +1,215 @@
+@import "../../../style/index.scss";
+
+nav {
+    background: $background-blue-light;
+
+    .order-direction {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .nav-item {
+        margin: auto 0;
+
+        .nav-link {
+            position: relative;
+            @include text($color: $color-grey, $size: 14px);
+
+            &:hover {
+                color: $color-black !important;
+            }
+
+            &.active {
+                color: $color-black !important;
+                font-weight: bold !important;
+            }
+
+            &.active::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background: $color-black !important;
+                bottom: 5px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+        }
+    }
+
+    .navbar-toggler:focus {
+        outline: none;
+        box-shadow: none;
+    }
+
+    @media (max-width: 991px) {
+        .nav-item {
+            .nav-link {
+                margin: 0;
+                padding: 20px 20px;
+            }
+
+            :hover {
+                background: $color-grey-light;
+                margin: 0;
+                padding: 20px 20px;
+            }
+        }
+
+        .order-direction {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        .group-button {
+            border-top: 1px solid $color-grey-light;
+            border-bottom: 1px solid $color-grey-light;
+
+            .btn-yellow,
+            .btn-blue {
+                width: 100%;
+                justify-content: center !important;
+            }
+        }
+
+        .ul-navbar {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+
+            li {
+                a {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: bottom;
+                    @include text($color: #797b7d, $weight: 700);
+
+                    img,
+                    svg {
+                        margin-right: 10px;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+// style search bar
+.search-bar-principal {
+
+    ::placeholder {
+        @include text-input;
+    }
+
+    .btn-select-category {
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px 0 0 8px !important;
+        padding-left: 15px;
+    }
+
+    .btn-category {
+        @include icon-style($background: $color-white);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 8px 0 0 8px !important;
+        padding-left: 15px;
+    }
+
+    .btn-category::after {
+        display: none;
+    }
+
+    .input-search {
+        border: none;
+        @include text-input($color: $color-black);
+    }
+
+    .input-search:focus {
+        box-shadow: none;
+    }
+
+    .btn-search {
+        @include icon-style($fill: $color-white);
+        border-radius: 0 8px 8px 0 !important;
+    }
+}
+
+// style logo
+.navbar-brand {
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        height: 40px;
+        width: 1px;
+        background: $color-black;
+        top: 50%;
+        right: -7.5px;
+        transform: translateY(-50%);
+    }
+}
+
+// nav bard search on mobile
+.sub-nav {
+    background: $background-blue-light;
+    border-bottom: 1px solid $color-grey-light;
+}
+
+//dropdown profile
+.dropdown-profile {
+    @include text($color: #797b7d, $weight: 700);
+    display: flex !important;
+    justify-content: space-between !important;
+    border: none !important;
+
+    svg {
+        margin-left: 10px;
+    }
+
+    @media (max-width: 991px) {
+        svg {
+            margin: 0 10px 0 5px;
+        }
+    }
+}
+
+ul.dropdown-menu.dropdown-item-profile {
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 50px 50px #00000010;
+    overflow: hidden;
+    left: -100%;
+    cursor: pointer;
+
+    @media (max-width: 991px) {
+        left: 0%;
+        width: calc(100vw - 25px);
+    }
+
+    li {
+        padding: 0;
+
+        a {
+            @include text($size: 14px, $weight: 500);
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            padding: 15px 20px;
+
+            &:focus {
+                background: $color-grey-light;
+            }
+
+            img {
+                margin-right: 12.5px;
+            }
+        }
+    }
+}

@@ -1,0 +1,286 @@
+@import "../../../style/index.scss";
+
+
+.register {
+  background-color: #FFF7DA;
+  margin: 0;
+  background-image: url("../../../assets/bg-register.png");
+  background-repeat: no-repeat;
+  background-size: 55%;
+  background-position: 100% 100%;
+}
+
+#regForm {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(15px);
+  padding-top: 10%;
+  padding-left: 25px;
+  padding-right: 25px;
+  width: 50%;
+  min-height: 100vh;
+  height: 100%;
+}
+
+.form-title {
+  @include text($size: 38px);
+  font-weight: 700 !important;
+  line-height: 57px;
+  text-align: center;
+  color: #2A1E17;
+  margin-bottom: 30px;
+}
+
+.steps {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.steps::before {
+  content: "";
+  position: absolute;
+  border-top: 4px dotted #285DA2;
+  width: 50%;
+  transform: translateY(15px);
+  height: 1px;
+  z-index: -5;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step-circle {
+  height: 36px;
+  width: 36px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #DAE5F2;
+  text-align: center;
+  @include text($color: #285DA2, $size: 24px);
+  font-weight: 700 !important;
+}
+
+/* Mark the steps that are finished and valid: */
+.step-circle.finish {
+  background: #285DA2;
+  @include text($color: white, $size: 24px);
+  font-weight: 700 !important;
+}
+
+/* Style the input fields */
+.register-input {
+  padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  border: 1px solid #F9E5A2;
+  border-radius: 5px;
+}
+
+.input-group {
+  input {
+    border: 1px solid #F9E5A2;
+    border-right: none;
+
+    &:focus {
+      box-shadow: none;
+      border: 1px solid #F9E5A2;
+      border-right: none;
+    }
+  }
+
+  span.input-group-text {
+    background: #FFF;
+    border: 1px solid #F9E5A2;
+  }
+}
+
+.register-input::placeholder {
+  color: #C9C9C9;
+}
+
+.register-radio {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-radio-box {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.register-radio p {
+  width: 100%;
+}
+
+.register-radio input[type='radio'] {
+  box-sizing: border-box;
+  margin: 2.5px 10px 0 0;
+  border-radius: 5px;
+}
+
+.register-radio input[type='radio']:checked+label {
+  color: black !important;
+}
+
+.register-radio label {
+  margin-right: 40px;
+  @include text($color: $color-black, $size: 14px);
+  font-weight: 400 !important;
+  line-height: 21px;
+}
+
+/* Mark input boxes that gets an error on validation: */
+.register-input input.invalid {
+  background-color: #ffdddd;
+}
+
+.register-next {
+  @include text($color: white, $size: 20px);
+  font-weight: 700 !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  background: #285DA2;
+  border-radius: 5px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, .1);
+  border: none;
+
+  &:hover {
+    background: $color-blue-light;
+  }
+
+  &:disabled {
+    opacity: .5;
+  }
+}
+
+.register-back {
+  @include text($color: white, $size: 20px);
+  font-weight: 700 !important;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: white;
+  background: rgba(255, 208, 123, 0.7);
+  border-radius: 5px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, .1);
+  border: none;
+  margin-right: 20px;
+
+  &:hover {
+    background: darken($color: $color-yellow-light, $amount: 15);
+  }
+
+}
+
+.register-navigation {
+  margin-top: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
+  justify-content: center;
+  display: flex;
+}
+
+.register-navigation button {
+  width: 100%;
+}
+
+.validation {
+  text-align: center;
+}
+
+
+.tab {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.acceptance {
+  display: flex;
+}
+
+.acceptance input {
+  width: 20px;
+}
+
+.acceptance label {
+  @include text($color: #5C5C5C, $size: 11px);
+  font-weight: 400 !important;
+}
+
+.link-register {
+  @include text;
+  text-decoration: none;
+
+  span {
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 992px) {
+  #regForm {
+    width: 100%;
+    padding-top: 17.5%;
+    padding-left: 50px;
+    padding-right: 50px;
+
+    .steps::before {
+      width: 50%;
+    }
+  }
+
+  .register {
+    background-color: #FFF7DA;
+    margin: 0;
+    background-image: url("../../../assets/bg-register.png");
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+  }
+
+  .tab {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .steps {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .register-navigation {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  #regForm {
+    width: 100%;
+    padding-top: 18%;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    .steps::before {
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  #regForm {
+    width: 100%;
+    padding-top: 35%;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 50px;
+
+    .steps::before {
+      width: 50%;
+    }
+  }
+}
+
+.form-check-input {
+  background-color: lightgrey !important;
+}

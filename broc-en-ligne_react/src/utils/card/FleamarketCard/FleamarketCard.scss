@@ -1,0 +1,56 @@
+@import "../../../style/index.scss";
+
+.card-fleamarket {
+    border: none;
+    box-shadow: 0px 22px 9px rgba(10, 23, 41, 0.01), 0px 13px 8px rgba(10, 23, 41, 0.05), 0px 6px 6px rgba(10, 23, 41, 0.09), 0px 1px 3px rgba(10, 23, 41, 0.1), 0px 0px 0px rgba(10, 23, 41, 0.1);
+
+    .img-fluid {
+        box-shadow: 6px 0px 20px rgba(33, 33, 33, 0.15);
+        background: #FFFBEB;
+        border-radius: 10px;
+        aspect-ratio: 1/1;
+        height: 200px;
+        width: 100%;
+    }
+
+    .card-body {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .date {
+        display: flex;
+    }
+
+    .card-date {
+        @include text($color: $color-blue, $size: 24px, $weight: 700);
+        display: flex;
+        background: rgba(40, 93, 162, 0.07);
+        border-radius: 5px;
+        padding: 8px 30px;
+        text-align: center;
+    }
+
+    .infos-container {
+        display: flex;
+        align-content: end;
+    }
+
+    .event-city {
+        @include text($color: $color-black, $size: 20px, $weight: 700);
+        margin: 0;
+    }
+
+    .event-type {
+        display: flex;
+        align-items: center;
+    }
+
+    .event-adress {
+        @include text-input($color: $color-grey, $size: 14px);
+        padding: 0;
+    }
+
+}

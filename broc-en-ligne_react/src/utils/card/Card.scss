@@ -1,0 +1,68 @@
+@import "../../style/index.scss";
+
+.card-product {
+    .tag-reserved {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        border-radius: 15px 15px 0 0;
+        background: $color-blue;
+        @include text($size: 14px, $weight: 700, $color: $color-white);
+    }
+
+    border-radius: $card-radius !important;
+    border: none !important;
+    box-shadow: 0 0 15px #00000025;
+    padding: 0 !important;
+    min-height: 425px;
+
+    .card-img {
+        border-radius: $card-radius !important;
+        object-fit: cover;
+        aspect-ratio: 4/ 4;
+    }
+
+    .card-body {
+        padding: 25px 25px 0 25px !important;
+
+        .card-text {
+            @include text($size: 16px, $weight: 500, $color: $color-grey);
+
+            span {
+                @include text($size: 16px, $weight: 700, $color: $color-blue);
+            }
+        }
+
+        .card-date {
+            @include text($size: 12px, $weight: 600, $color: $color-blue);
+        }
+
+        h5 {
+            @include text($size: 16px, $weight: 700);
+        }
+
+        .card-price {
+            @include text($size: 16px, $weight: 500, $color: $color-grey);
+        }
+
+        .col-heart {
+            display: flex;
+            justify-content: center;
+            align-items: start;
+
+            svg {
+                z-index: 3;
+
+                &:hover {
+                    fill: $color-yellow-light;
+                    cursor: pointer;
+                }
+
+                &.liked {
+                    fill: $color-yellow;
+                }
+            }
+        }
+    }
+}

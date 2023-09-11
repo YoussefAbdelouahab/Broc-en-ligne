@@ -1,0 +1,150 @@
+@import "../../../style/index.scss";
+
+.settings-user {
+    padding: 0;
+
+    h1 {
+        @include title($size: 38px);
+    }
+
+    h3 {
+        @include text($size: 24px);
+    }
+
+    h4 {
+        @include text($size: 20px);
+    }
+
+    p,
+    ul {
+        @include text;
+    }
+
+    #v-pills-tab {
+        button {
+            @include text($color: $color-black, $size: 18px);
+
+            &:hover {
+                background: $color-blue-light;
+            }
+
+            &.nav-link.active {
+                @include text($color: $color-white, $size: 18px);
+                background-color: $color-blue;
+            }
+        }
+    }
+
+    .tab-content {
+        background: none;
+        min-height: 100vh;
+
+        .tab-pane {
+            box-shadow: none;
+            background: none !important;
+
+            .btn-notification-preference {
+                background: $color-blue;
+                @include text($color: $color-white);
+
+                &:hover {
+                    background: $color-blue-light;
+                }
+            }
+
+            //delete user
+            .delete-user {
+                .form-check-label {
+                    @include text($size: 14px);
+                }
+
+                .btn-delete {
+                    background: $color-blue;
+                    @include text($color: $color-white);
+
+                    &:hover {
+                        background: $color-blue-light;
+                    }
+                }
+            }
+
+            //form
+            label {
+                @include text($color: $color-blue, $size: 14px, $weight: 600);
+
+                &.form-check-label {
+                    @include text($color: $color-grey, $size: 14px, $weight: 400);
+                }
+            }
+
+            .input-group {
+                input {
+                    border-right: none;
+                    border-color: $color-grey-light;
+
+                    &~span {
+                        border-color: $color-grey-light;
+                    }
+
+                    &:focus,
+                    &:focus~span {
+                        border-color: $color-blue;
+                    }
+                }
+
+                span {
+                    background: none;
+                }
+            }
+
+            .form-control,
+            .form-select {
+                height: 50px;
+                border-radius: 5px;
+
+                &::placeholder {
+                    @include text($color: $color-grey, $size: 14px, $weight: 400);
+                }
+
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+
+            .form-check {
+                label {
+                    @include text($color: #000, $size: 14px, $weight: 400);
+                }
+            }
+
+            .form-check-label {
+                @include text($color: $color-grey, $size: 14px, $weight: 400);
+            }
+
+            .form-check-input {
+                border-radius: 5px;
+            }
+
+            .btn-submit {
+                background: $color-blue;
+                @include text($color: $color-white, $size: 20px, $weight: 700);
+                display: flex !important;
+                justify-content: center !important;
+                width: 100%;
+
+                &:hover {
+                    background: $color-blue-light;
+                }
+            }
+        }
+    }
+
+
+
+}
+
+#checkboxShowContact,
+#checkboxNotificationPreference,
+#checkboxDeleteUser {
+    border-color: #000;
+}

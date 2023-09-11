@@ -1,0 +1,472 @@
+[
+    {
+        "id": "01",
+        "region": "Auvergne-Rhône-Alpes",
+        "department": "Ain"
+    },
+    {
+        "id": "02",
+        "region": "Hauts-de-France",
+        "department": "Aisne"
+    },
+    {
+        "id": "03",
+        "region": "Auvergne-Rhône-Alpes",
+        "department": "Allier"
+    },
+    {
+        "id": "04",
+        "region": "Provence-Alpes-Côte d'Azur",
+        "department": "Alpes-de-Haute-Provence"
+    },
+    {
+        "id": "05",
+        "region": "Provence-Alpes-Côte d'Azur",
+        "department": "Hautes-Alpes"
+    },
+    {
+        "id": "06",
+        "region": "Provence-Alpes-Côte d'Azur",
+        "department": "Alpes-Maritimes"
+    },
+    {
+        "id": "07",
+        "region": "Auvergne-Rhône-Alpes",
+        "department": "Ardèche"
+    },
+    {
+        "id": "08",
+        "region": "Grand Est",
+        "department": "Ardennes"
+    },
+    {
+        "id": "09",
+        "region": "Occitanie",
+        "department": "Ariège"
+    },
+    {
+        "id": "10",
+        "region": "Grand Est",
+        "department": "Aube"
+    },
+    {
+        "id": "11",
+        "region": "Occitanie",
+        "department": "Aude"
+    },
+    {
+        "id": "12",
+        "region": "Occitanie",
+        "department": "Aveyron"
+    },
+    {
+        "id": "13",
+        "region": "Provence-Alpes-Côte d'Azur",
+        "department": "Bouches-du-Rhône"
+    },
+    {
+        "id": "14",
+        "region": "Normandie",
+        "department": "Calvados"
+    },
+    {
+        "id": "15",
+        "region": "Auvergne-Rhône-Alpes",
+        "department": "Cantal"
+    },
+    {
+        "id": "16",
+        "region": "Nouvelle-Aquitaine",
+        "department": "Charente"
+    },
+    {
+        "id": "17",
+        "region": "Nouvelle-Aquitaine",
+        "department": "Charente-Maritime"
+    },
+    {
+        "id": "18",
+        "region": "Centre-Val de Loire",
+        "department": "Cher"
+    },
+    {
+        "id": "19",
+        "region": "Nouvelle-Aquitaine",
+        "department": "Corrèze"
+    },
+    {
+        "id": "21",
+        "region": "Bourgogne-Franche-Comté",
+        "department": "Côte-d'Or"
+    },
+    {
+        "id": "22",
+        "region": "Bretagne",
+        "department": "Côtes-d'Armor"
+    },
+    {
+        "id": "23",
+        "region": "Nouvelle-Aquitaine",
+        "department": "Creuse"
+    },
+    {
+        "id": "24",
+        "region": "Nouvelle-Aquitaine",
+        "department": "Dordogne"
+    },
+    {
+        "id": "25",
+        "region": "Bourgogne-Franche-Comté",
+        "department": "Doubs"
+    },
+    {
+        "id": "26",
+        "region": "Auvergne-Rhône-Alpes",
+        "department": "Drôme"
+    },
+    {
+        "id": "27",
+        "region": "Normandie",
+        "department": "Eure"
+    },
+    {
+        "id": "28",
+        "region": "Centre-Val de Loire",
+        "department": "Eure-et-Loir"
+    },
+    {
+        "id": "29",
+        "region": "Bretagne",
+        "department": "Finistère"
+    },
+    {
+        "id": "30",
+        "region": "Occitanie",
+        "department": "Gard"
+    },
+    {
+        "id": "31",
+        "region": "Occitanie",
+        "department": "Haute-Garonne"
+    },
+    {
+        "id": "32",
+        "region": "Occitanie",
+        "department": "Gers"
+    },
+    {
+        "id": "33",
+        "region": "Nouvelle-Aquitaine",
+        "department": "Gironde"
+    },
+    {
+        "id": "34",
+        "region": "Occitanie",
+        "department": "Hérault"
+    },
+    {
+        "id": "35",
+        "region": "Bretagne",
+        "department": "Ille-et-Vilaine"
+    },
+    {
+        "id": "36",
+        "region": "Centre-Val de Loire",
+        "department": "Indre"
+    },
+    {
+        "id": "37",
+        "region": "Centre-Val de Loire",
+        "department": "Indre-et-Loire"
+    },
+    {
+        "id": "38",
+        "region": "Auvergne-Rhône-Alpes",
+        "department": "Isère"
+    },
+    {
+        "id": "39",
+        "region": "Bourgogne-Franche-Comté",
+        "department": "Jura"
+    },
+    {
+        "id": "40",
+        "region": "Nouvelle-Aquitaine",
+        "department": "Landes"
+    },
+    {
+        "id": "41",
+        "region": "Centre-Val de Loire",
+        "department": "Loir-et-Cher"
+    },
+    {
+        "id": "42",
+        "region": "Auvergne-Rhône-Alpes",
+        "department": "Loire"
+    },
+    {
+        "id": "43",
+        "region": "Auvergne-Rhône-Alpes",
+        "department": "Haute-Loire"
+    },
+    {
+        "id": "44",
+        "region": "Pays de la Loire",
+        "department": "Loire-Atlantique"
+    },
+    {
+        "id": "45",
+        "region": "Centre-Val de Loire",
+        "department": "Loiret"
+    },
+    {
+        "id": "46",
+        "region": "Occitanie",
+        "department": "Lot"
+    },
+    {
+        "id": "47",
+        "region": "Nouvelle-Aquitaine",
+        "department": "Lot-et-Garonne"
+    },
+    {
+        "id": "48",
+        "region": "Occitanie",
+        "department": "Lozère"
+    },
+    {
+        "id": "49",
+        "region": "Pays de la Loire",
+        "department": "Maine-et-Loire"
+    },
+    {
+        "id": "50",
+        "region": "Normandie",
+        "department": "Manche"
+    },
+    {
+        "id": "51",
+        "region": "Grand Est",
+        "department": "Marne"
+    },
+    {
+        "id": "52",
+        "region": "Grand Est",
+        "department": "Haute-Marne"
+    },
+    {
+        "id": "53",
+        "region": "Pays de la Loire",
+        "department": "Mayenne"
+    },
+    {
+        "id": "54",
+        "region": "Grand Est",
+        "department": "Meurthe-et-Moselle"
+    },
+    {
+        "id": "55",
+        "region": "Grand Est",
+        "department": "Meuse"
+    },
+    {
+        "id": "56",
+        "region": "Bretagne",
+        "department": "Morbihan"
+    },
+    {
+        "id": "57",
+        "region": "Grand Est",
+        "department": "Moselle"
+    },
+    {
+        "id": "58",
+        "region": "Bourgogne-Franche-Comté",
+        "department": "Nièvre"
+    },
+    {
+        "id": "59",
+        "region": "Hauts-de-France",
+        "department": "Nord"
+    },
+    {
+        "id": "60",
+        "region": "Hauts-de-France",
+        "department": "Oise"
+    },
+    {
+        "id": "61",
+        "region": "Normandie",
+        "department": "Orne"
+    },
+    {
+        "id": "62",
+        "region": "Hauts-de-France",
+        "department": "Pas-de-Calais"
+    },
+    {
+        "id": "63",
+        "region": "Auvergne-Rhône-Alpes",
+        "department": "Puy-de-Dôme"
+    },
+    {
+        "id": "64",
+        "region": "Nouvelle-Aquitaine",
+        "department": "Pyrénées-Atlantiques"
+    },
+    {
+        "id": "65",
+        "region": "Occitanie",
+        "department": "Hautes-Pyrénées"
+    },
+    {
+        "id": "66",
+        "region": "Occitanie",
+        "department": "Pyrénées-Orientales"
+    },
+    {
+        "id": "67",
+        "region": "Grand Est",
+        "department": "Bas-Rhin"
+    },
+    {
+        "id": "68",
+        "region": "Grand Est",
+        "department": "Haut-Rhin"
+    },
+    {
+        "id": "69",
+        "region": "Auvergne-Rhône-Alpes",
+        "department": "Rhône"
+    },
+    {
+        "id": "70",
+        "region": "Bourgogne-Franche-Comté",
+        "department": "Haute-Saône"
+    },
+    {
+        "id": "71",
+        "region": "Bourgogne-Franche-Comté",
+        "department": "Saône-et-Loire"
+    },
+    {
+        "id": "72",
+        "region": "Pays de la Loire",
+        "department": "Sarthe"
+    },
+    {
+        "id": "73",
+        "region": "Auvergne-Rhône-Alpes",
+        "department": "Savoie"
+    },
+    {
+        "id": "74",
+        "region": "Auvergne-Rhône-Alpes",
+        "department": "Haute-Savoie"
+    },
+    {
+        "id": "75",
+        "region": "Île-de-France",
+        "department": "Paris"
+    },
+    {
+        "id": "76",
+        "region": "Normandie",
+        "department": "Seine-Maritime"
+    },
+    {
+        "id": "77",
+        "region": "Île-de-France",
+        "department": "Seine-et-Marne"
+    },
+    {
+        "id": "78",
+        "region": "Île-de-France",
+        "department": "Yvelines"
+    },
+    {
+        "id": "79",
+        "region": "Nouvelle-Aquitaine",
+        "department": "Deux-Sèvres"
+    },
+    {
+        "id": "80",
+        "region": "Hauts-de-France",
+        "department": "Somme"
+    },
+    {
+        "id": "81",
+        "region": "Occitanie",
+        "department": "Tarn"
+    },
+    {
+        "id": "82",
+        "region": "Occitanie",
+        "department": "Tarn-et-Garonne"
+    },
+    {
+        "id": "83",
+        "region": "Provence-Alpes-Côte d'Azur",
+        "department": "Var"
+    },
+    {
+        "id": "84",
+        "region": "Provence-Alpes-Côte d'Azur",
+        "department": "Vaucluse"
+    },
+    {
+        "id": "85",
+        "region": "Pays de la Loire",
+        "department": "Vendée"
+    },
+    {
+        "id": "86",
+        "region": "Nouvelle-Aquitaine",
+        "department": "Vienne"
+    },
+    {
+        "id": "87",
+        "region": "Nouvelle-Aquitaine",
+        "department": "Haute-Vienne"
+    },
+    {
+        "id": "88",
+        "region": "Grand Est",
+        "department": "Vosges"
+    },
+    {
+        "id": "89",
+        "region": "Bourgogne-Franche-Comté",
+        "department": "Yonne"
+    },
+    {
+        "id": "90",
+        "region": "Bourgogne-Franche-Comté",
+        "department": "Territoire de Belfort"
+    },
+    {
+        "id": "91",
+        "region": "Île-de-France",
+        "department": "Essonne"
+    },
+    {
+        "id": "92",
+        "region": "Île-de-France",
+        "department": "Hauts-de-Seine"
+    },
+    {
+        "id": "93",
+        "region": "Île-de-France",
+        "department": "Seine-Saint-Denis"
+    },
+    {
+        "id": "94",
+        "region": "Île-de-France",
+        "department": "Val-de-Marne"
+    },
+    {
+        "id": "95",
+        "region": "Île-de-France",
+        "department": "Val-d'Oise"
+    }
+]

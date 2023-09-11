@@ -1,0 +1,35 @@
+// variables fonts
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../font/Montserrat-Bold.woff2') format('woff2'),
+        url('../font/Montserrat-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../font/Montserrat-Regular.woff2') format('woff2'),
+        url('../font/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+$font-primary: "Montserrat", sans-serif;
+
+// variables colors
+$color-white: #fff;
+$color-black: #111;
+$color-grey: #A7A7A7;
+$color-grey-light: #EFEFEF;
+$color-blue: #285DA2;
+$background-blue-light: #285DA210;
+$color-blue-light: #548DD8;
+$color-yellow: #FFE483;
+$color-yellow-light: #FFF4CF;
+
+// radius
+$btn-radius: 8px;
+$card-radius: 15px;

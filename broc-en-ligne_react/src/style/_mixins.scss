@@ -1,0 +1,124 @@
+@mixin title($color: $color-black, $size: 30px) {
+    font-family: $font-primary !important;
+    font-weight: bold !important;
+    font-size: $size !important;
+    line-height: $size * 1.5;
+    color: $color !important;
+
+    @media (max-width: 1024px) {
+        font-size: $size / 1.25 !important;
+        line-height: ($size / 1.25) * 1.5;
+    }
+}
+
+@mixin text($color: $color-black, $size: 16px, $weight: 400) {
+    font-family: $font-primary !important;
+    font-weight: $weight !important;
+    font-size: $size !important;
+    line-height: $size * 1.5;
+    color: $color !important;
+
+    @media (max-width: 1024px) {
+        font-size: $size / 1.05 !important;
+        line-height: ($size / 1.05) * 1.5;
+    }
+}
+
+@mixin text-btn($color: $color-black, $size: 14px) {
+    font-family: $font-primary !important;
+    font-weight: bold !important;
+    font-size: $size !important;
+    line-height: $size * 1.5;
+    color: $color !important;
+}
+
+@mixin text-input($color: $color-grey, $size: 14px) {
+    font-family: $font-primary !important;
+    font-weight: 400 !important;
+    font-size: $size !important;
+    line-height: $size * 1.5;
+    color: $color !important;
+}
+
+@mixin icon-style($color: $color-white, $background: $color-black, $fill: $color-white) {
+    color: $color !important;
+    fill: $fill !important;
+    background: $background !important;
+    border: none;
+}
+
+@mixin btn-style($background: $color-blue, $radius: $btn-radius) {
+    background: $background !important;
+    border-radius: $radius !important;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, .1);
+}
+
+@mixin link($size: 14px, $color: $color-blue, $weight: 600) {
+    @include text($size: $size, $color: $color, $weight: $weight);
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+        color: $color-blue-light !important;
+
+        &::before,
+        &::after {
+            opacity: .8;
+        }
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        width: calc(100% + 22.5px);
+        height: 2px;
+        background: $color;
+    }
+
+    &::after {
+        content: url("../assets/icon/arrow-link.svg");
+        position: absolute;
+        right: -25px;
+        top: 45%;
+        transform: translateY(-50%);
+        height: 100%;
+    }
+}
+
+@mixin link-return($size: 16px, $color: $color-black, $weight: 500) {
+    padding-left: 25px;
+    @include text($size: $size, $color: $color, $weight: $weight);
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+        color: $color !important;
+        opacity: .75;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        width: calc(100% - 22.5px);
+        height: 1px;
+        background: $color;
+    }
+
+    &::after {
+        content: "";
+        background-image: url("../assets/icon/arrow.svg");
+        background-position: left center;
+        background-repeat: no-repeat;
+        background-size: 17.5px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 100%;
+        width: 100%;
+    }
+}

@@ -1,0 +1,30 @@
+@import "../../style/index.scss";
+
+.btn-blue {
+  @include text-btn($color: $color-white);
+  @include btn-style;
+  margin: auto;
+}
+
+.btn-blue:hover {
+  background: $color-blue-light !important;
+}
+
+.btn-yellow {
+  @include text-btn;
+  @include btn-style($background: $color-yellow);
+  margin: auto;
+}
+
+.btn-yellow:hover {
+  background: $color-yellow-light !important;
+}
+
+.btn {
+  display: flex !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  margin: auto !important;
+  text-align: center;
+}

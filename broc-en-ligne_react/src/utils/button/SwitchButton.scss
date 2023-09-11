@@ -1,0 +1,38 @@
+@import "../../style/index.scss";
+
+.switch-button {
+  display: flex;
+  position: relative;
+  width: 50px;
+  height: 15px;
+  background-color: #ddd;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.switch-button.on {
+  background-color: $color-blue;
+}
+
+.switch-button.off {
+  background-color: $color-grey-light;
+}
+
+.switch-button .button-status {
+  position: absolute;
+  transition: all 0.3s ease;
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  box-shadow: 0 0 10px #00000025;
+  border-radius: 100%;
+  top: -30%;
+}
+
+.switch-button.on .button-status {
+  transform: translateX(calc(50px - 22px));
+}
+
+.switch-button.off .button-status {
+  transform: translateX(0);
+}

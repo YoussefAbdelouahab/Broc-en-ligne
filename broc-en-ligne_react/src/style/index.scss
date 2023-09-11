@@ -1,0 +1,12 @@
+//scss globals
+@import "./_variables";
+@import "./_mixins";
+
+html,
+body {
+    overflow-x: hidden;
+
+    .container {
+        margin: 0 auto;
+    }
+}

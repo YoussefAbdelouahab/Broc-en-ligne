@@ -1,0 +1,71 @@
+@import "../../style/index.scss";
+
+footer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #285DA2;
+    padding-top: 60px;
+}
+footer a{
+    @include text($color: $color-white, $size: 15px);
+    text-decoration: none !important;
+}
+.footer-list{
+    width: 100%;
+    margin-bottom: 35px;
+}
+.footer-list ul{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.footer-list li{
+    display: inline;
+    padding: 30px;
+    line-height: 20px;
+    letter-spacing: -0.204545px;
+}
+.footer-socials {
+    margin-bottom: 25px;
+}
+.footer-socials a{
+    margin: 30px;
+}
+.footer-rgpd{
+    width: 100%;
+    margin-bottom: 10px;
+}
+.footer-rgpd ul{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.footer-rgpd li{
+    display: inline;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 11px;
+    letter-spacing: -0.204545px;
+    line-height: 20px;
+}
+.footer-cocy{
+    color: rgba(255, 255, 255, 0.25);
+}
+
+@media (max-width: 700px) {
+    .footer-list ul, .footer-rgpd ul{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-socials a{
+        margin-right: 20px;
+    }
+    .footer-list a {
+        padding-bottom: 30px;
+    }
+    .footer-rgpd li {
+        padding-left: 0px;
+    }
+
+}

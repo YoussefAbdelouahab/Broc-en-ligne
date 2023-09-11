@@ -1,0 +1,96 @@
+@import "../../../style/index.scss";
+
+.container {
+    max-width: 1280px;
+    margin: 60px auto;
+
+    .link-return {
+        color: $color-black;
+    }
+
+    .link-return:hover {
+        cursor: pointer;
+    }
+
+    .link-return img {
+        width: 15px;
+    }
+}
+
+.fleamarket-infos-container {
+    display: flex;
+    gap: 40px;
+
+    .title span {
+        @include text;
+    }
+
+    .infos {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    h2,
+    h6 {
+        font-family: $font-primary;
+        font-weight: 700;
+    }
+
+    p,
+    li {
+        @include text;
+    }
+
+    li {
+        padding: 3px 0;
+        display: flex;
+        margin: auto;
+    }
+
+
+    h2 {
+        @include title($size: 22px)
+    }
+
+    .main-infos {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    .main-infos>* {
+        margin: auto 0;
+    }
+
+    .img-container {
+        width: 30px !important;
+    }
+
+    .fleamarket-illustration img {
+        padding-top: 10px;
+        margin-bottom: -32px;
+    }
+
+    .address {
+        font-style: italic;
+    }
+
+}
+
+.fleamarket-description-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.card {
+    box-shadow: 0px 22px 9px rgba(10, 23, 41, 0.01), 0px 13px 8px rgba(10, 23, 41, 0.05), 0px 6px 6px rgba(10, 23, 41, 0.09), 0px 1px 3px rgba(10, 23, 41, 0.1), 0px 0px 0px rgba(10, 23, 41, 0.1);
+}
+
+.fleamarket-infos-container>* {
+    flex: 1;
+}

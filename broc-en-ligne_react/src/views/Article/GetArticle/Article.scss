@@ -1,0 +1,430 @@
+@import "../../../style/index.scss";
+
+//side info user, article
+.info-article {
+    .link-return {
+        padding-left: 25px;
+        @include text($size: 16px, $color: $color-black, $weight: 500);
+        text-decoration: none;
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+            color: $color-black !important;
+            opacity: .75;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            width: calc(100% - 22.5px);
+            height: 1px;
+            background: $color-black;
+        }
+
+        &::after {
+            content: "";
+            background-image: url("../../../assets/icon/arrow.svg");
+            background-position: left center;
+            background-repeat: no-repeat;
+            background-size: 17.5px;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 100%;
+            width: 100%;
+        }
+
+    }
+
+    //slider images article
+    #carouselExampleIndicators {
+        position: relative;
+
+        &.no-auth {
+
+            // slide images
+            .carousel-inner {
+                .carousel-item:nth-of-type(1) {
+                    img {
+                        filter: blur(0);
+
+                        &::after {
+                            display: none;
+                        }
+                    }
+
+                    video {
+                        filter: blur(0);
+
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+
+                .carousel-item {
+                    img {
+                        filter: blur(15);
+
+                        &::after {
+                            content: "Veuillez vous connecter afin de pouvoir visualiser les images et les vidéos.";
+                            color: $color-blue;
+                            @include text($color: $color-black, $weight: 700, $size: 16px);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            text-align: center;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            padding: 0 125px;
+                        }
+                    }
+
+                    video {
+                        filter: blur(3px);
+
+                        &::after {
+                            content: "Veuillez vous connecter afin de pouvoir visualiser les images et les vidéos.";
+                            color: $color-blue;
+                            @include text($color: $color-black, $weight: 700, $size: 16px);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            text-align: center;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 100%;
+                            padding: 0 125px;
+                        }
+                    }
+                }
+            }
+
+            //thumbnails
+            .carousel-indicators {
+
+                .button-item:nth-of-type(1) {
+                    img {
+                        opacity: 1;
+                        filter: blur(0);
+                    }
+
+                    video {
+                        opacity: 1;
+                        filter: blur(0);
+                    }
+                }
+
+                .button-item {
+                    img {
+                        opacity: .5;
+                        filter: blur(3px);
+                    }
+
+                    video {
+                        opacity: .5;
+                        filter: blur(3px);
+                    }
+                }
+            }
+        }
+
+        .carousel-inner {
+            border-radius: 15px !important;
+
+            .carousel-item {
+                padding: 0 10px;
+                border-radius: 15px;
+
+                img {
+                    width: 100%;
+                    aspect-ratio: 5/3;
+                    object-position: center;
+                    object-fit: cover;
+                    border-radius: 15px;
+                }
+
+                video {
+                    width: 100%;
+                    aspect-ratio: 5/3;
+                    object-position: center;
+                    object-fit: cover;
+                    border-radius: 15px;
+                }
+
+                .carousel-caption {
+                    position: absolute;
+                    bottom: 0;
+                    padding: 0;
+                    @include text($color: $color-white, $weight: 400);
+
+                    span {
+                        @include text($color: $color-white, $weight: 700);
+                    }
+                }
+
+            }
+        }
+
+        // thumbnails
+        .carousel-indicators {
+            position: unset;
+            margin: auto;
+
+            .button-item {
+                width: 70px;
+                height: 70px;
+                border: 3px solid transparent;
+                border-radius: 5px !important;
+                margin-top: 25px;
+                opacity: 1;
+
+                &.active {
+                    border: 3px solid $color-yellow;
+                }
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    aspect-ratio: 2/ 2;
+                }
+
+                video {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    aspect-ratio: 2/ 2;
+                }
+            }
+        }
+
+        // navigation
+        @media (max-width: 1280px) {
+            .carousel-control-prev {
+                left: 0 !important;
+            }
+
+            .carousel-control-next {
+                right: 0 !important;
+            }
+
+            .carousel-control-prev,
+            .carousel-control-next {
+                top: 37.5% !important;
+                transform: translateY(-50%) !important;
+                height: 75% !important;
+                width: 25% !important;
+                align-items: center !important;
+            }
+        }
+
+        .carousel-control-prev {
+            left: 10%;
+        }
+
+        .carousel-control-next {
+            right: 10%;
+        }
+
+        .carousel-control-prev,
+        .carousel-control-next {
+            position: absolute;
+            top: 95%;
+            transform: translateY(-95%);
+            height: 25px;
+            width: 25px;
+            display: flex;
+            align-items: end;
+        }
+
+        .carousel-control-prev-icon {
+            background-image: url("../../../assets/icon/arrow.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 25px;
+            width: 25px;
+        }
+
+        .carousel-control-next-icon {
+            background-image: url("../../../assets/icon/arrow.svg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+            height: 25px;
+            width: 25px;
+            transform: rotate(180deg);
+        }
+    }
+
+    // info user, article
+    .card-info {
+        background: $color-white;
+        box-shadow: 0 5px 15px #00000015;
+        border-radius: 10px;
+
+        &.card-info-user {
+            .info-group-user {
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px;
+
+                .bi-person-circle {
+                    fill: $color-blue;
+                }
+
+                .username {
+                    @include title($size: 22px, $color: $color-blue);
+                    margin: 0 10px 0 0;
+                }
+            }
+
+            p {
+                @include text($size: 14px);
+
+                &.info-user-location {
+                    display: flex;
+                    align-items: center;
+
+                    svg {
+                        margin-right: 7.5px;
+                    }
+                }
+            }
+        }
+
+        &.card-info-article {
+            .info-article {
+                justify-content: space-between;
+                align-items: baseline;
+
+                .title-article {
+                    @include title($size: 22px);
+                }
+
+                .price {
+                    @include text($size: 16px, $weight: 600);
+                }
+            }
+
+            .description-article {
+                @include text($size: 14px);
+
+                .etat,
+                .date {
+                    @include text($size: 14px, $weight: 600);
+                }
+            }
+        }
+
+        // link card info
+        a,
+        .link-showMore {
+            @include link;
+        }
+    }
+
+    .group-btn-action {
+
+        .btn {
+            display: flex;
+            justify-content: center !important;
+            align-items: center !important;
+            width: 100%;
+        }
+
+        .btn-reservation {
+            img {
+                transform: translateY(2px);
+            }
+        }
+    }
+}
+
+.reservation-info {
+    text-align: center;
+    font-size: 20px;
+}
+
+.reservation-date {
+    color: #285DA2;
+}
+
+.reservation-avert {
+    font-weight: 700 !important;
+}
+
+.reservation-adresse {
+    margin-top: -15px;
+}
+
+.reservation-content {
+    flex-direction: row !important;
+}
+
+
+
+.reservation-next {
+    width: 100%;
+    @include text($color: white, $size: 20px);
+    font-weight: 700 !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: white;
+    background: #285DA2;
+    border-radius: 5px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, .1);
+    border: none;
+    display: flex;
+    justify-content: center;
+}
+
+
+.mrg-top {
+    margin-top: 20px;
+
+}
+
+.modal-right {
+    position: relative;
+    width: 30%;
+
+    img {
+        position: absolute;
+        right: 0;
+        bottom: -50px;
+    }
+}
+
+.btn-reserved {
+    font-family: "Montserrat", sans-serif !important;
+    font-weight: bold !important;
+    font-size: 14px !important;
+    line-height: 21px;
+    color: #fff !important;
+    background: #90A1B7 !important;
+    border-radius: 8px !important;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.set-rate {
+    cursor: pointer;
+}
+
+.cross-hide {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 30px;
+}

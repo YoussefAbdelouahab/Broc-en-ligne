@@ -1,0 +1,534 @@
+@import "../../../style/index.scss";
+
+.profile {
+  .card-profile {
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px #00000025;
+
+    @media (max-width: 992px) {
+      min-height: 325px;
+    }
+
+    .card-profile-header {
+      background: $color-yellow;
+      background-image: url("../../../assets/texture-profile.png");
+      background-size: cover;
+      height: 75px;
+
+      .avatar {
+        background: $color-white;
+        height: 110px;
+        width: 110px;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 10px 10px #00000025;
+
+        p {
+          margin: 0;
+          @include text($color: $color-blue, $size: 36px, $weight: 700);
+        }
+      }
+
+      @media (max-width: 992px) {
+        .avatar {
+          left: 72.5%;
+        }
+      }
+    }
+
+    .card-profile-content {
+
+      position: absolute;
+      bottom: 0 !important;
+      width: 100%;
+
+      .card-profile-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: start;
+
+        h2 {
+          @include title($color: $color-blue, $size: 20px)
+        }
+
+        p {
+          @include text($color: $color-grey)
+        }
+      }
+
+      .card-profile-group-action {
+        a {
+          width: 100%;
+
+          &.btn {
+            padding: 12.5px !important;
+            display: flex;
+            justify-content: center !important;
+
+            &.btn-blue {
+              @include text($color: $color-white, $size: 14px, $weight: 700);
+            }
+
+            &.btn-yellow {
+              @include text($size: 14px, $weight: 700);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .card-info {
+    background: #E5ECF6;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px #00000025;
+
+    h3 {
+      @include title($color: $color-black, $size: 20px)
+    }
+
+    .card-info-icon {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      padding-bottom: 25px;
+
+      img {
+        height: 45px;
+        margin-right: 20px;
+      }
+
+      p {
+        @include text($color: $color-black, $size: 16px);
+        margin: 0;
+      }
+    }
+  }
+}
+
+/*          Profile article box       */
+.article {
+  margin-top: 35px;
+  margin-bottom: 35px;
+  height: 700px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0px 22px 9px rgba(10, 23, 41, 0.01), 0px 13px 8px rgba(10, 23, 41, 0.05), 0px 6px 6px rgba(10, 23, 41, 0.09), 0px 1px 3px rgba(10, 23, 41, 0.1), 0px 0px 0px rgba(10, 23, 41, 0.1);
+}
+
+.article-scroll {
+  overflow: scroll;
+  height: 89%;
+  width: 100%;
+  padding-bottom: 25px !important;
+}
+
+/*          Profile article box radio button       */
+.radio-article {
+  display: flex;
+  justify-content: space-around;
+  margin-left: -12px !important;
+}
+
+.radio-article label {
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  margin-top: 25px;
+  @include text($color: #000000, $size: 16px);
+  opacity: 0.5;
+  font-weight: 400 !important;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #EDEDED;
+}
+
+.radio-article input {
+  visibility: hidden;
+}
+
+.radio-article input[type="radio"]:checked+label {
+  @include text($color: #285DA2, $size: 16px);
+  font-weight: 700 !important;
+  border-bottom: 1px solid #285DA2;
+  opacity: 1;
+}
+
+
+.article-infos {
+  margin-right: 30px;
+  margin-left: 30px;
+  margin-top: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 22px 9px rgba(10, 23, 41, 0.01), 0px 13px 8px rgba(10, 23, 41, 0.05), 0px 6px 6px rgba(10, 23, 41, 0.09), 0px 1px 3px rgba(10, 23, 41, 0.1), 0px 0px 0px rgba(10, 23, 41, 0.1);
+}
+
+/*          Profile article box card    */
+.article-card {
+  display: flex;
+  position: relative;
+}
+
+.article-image {
+  width: 250px;
+  height: 120px;
+}
+
+.article-image img,
+.article-image video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.article-data {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0 20px 0 30px;
+}
+
+.h3_button {
+  display: flex !important;
+  width: 100%;
+  height: 20px;
+  justify-content: space-between;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+.h3_button .dropdown {
+  z-index: 99;
+  margin-top: -25px;
+  margin-right: -15px;
+}
+
+.h3_button .dropdown .btn {
+  border: none;
+}
+
+.h3_button .dropdown .btn-action::before {
+  content: '\2026';
+  font-size: 25px;
+  font-weight: 700 !important;
+  cursor: pointer;
+}
+
+.h3_button .dropdown .btn-action:after {
+  display: none;
+}
+
+//dropdown profile
+.h3_button .dropdown ul.dropdown-menu.dropdown-item-action {
+  border-radius: 20px;
+  border: none;
+  box-shadow: 0 0 50px #00000015;
+  width: 200px;
+  overflow: hidden;
+  cursor: pointer;
+
+  li {
+    padding: 0;
+
+    a {
+      @include text($size: 14px, $weight: 500);
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      padding: 15px 20px;
+
+      &:focus {
+        background: $color-grey-light !important;
+      }
+
+      img {
+        margin-right: 12.5px;
+      }
+    }
+  }
+}
+
+.h3_button h3 {
+  @include text($size: 16px);
+  font-weight: 700 !important;
+}
+
+.article-prix {
+  width: 100%;
+  height: 20px;
+  margin-top: 5px;
+}
+
+.article-prix {
+  @include text($size: 16px);
+  font-weight: 500 !important;
+  color: rgba(30, 30, 30, 0.5) !important;
+}
+
+.article-date {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.article-date p {
+  @include text($size: 14px);
+  font-weight: 500 !important;
+  color: #285DA2 !important;
+  opacity: 0.5;
+}
+
+.heart-int {
+  display: flex;
+}
+
+.heart-int p {
+  margin-right: 10px;
+  opacity: 1;
+  color: black !important;
+}
+
+.heart-int img {
+  margin-right: 10px;
+  margin-top: 2px;
+  width: 20px;
+  height: 20px;
+}
+
+.article-reserved {
+  position: absolute;
+  width: 117px;
+  height: 35px;
+  background: #285DA2;
+  @include text($color: white, $size: 14px);
+  font-weight: 700 !important;
+  border: none;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  margin-top: -20px;
+  margin-left: 50%;
+  padding-right: 30px;
+}
+
+.article-reserved:before {
+  content: url("../../../assets/icon/check.svg");
+  position: absolute;
+  transform: translateX(70px);
+}
+
+
+@media (max-width: 768px) {
+  .profile-infos {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .profile-infos-left {
+    width: 100%;
+  }
+
+  .profile-infos-right {
+    margin-top: 30px;
+    width: 100%;
+  }
+
+  .profile-article {
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  .article {
+    order: 1;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 30px;
+    margin-top: 0;
+  }
+
+}
+
+@media (max-width: 426px) {
+  .article-reserved {
+    margin-top: -10px;
+  }
+
+  .profile-infos {
+    height: auto;
+  }
+
+  .profile-infos-left {
+    height: auto;
+    width: 100%;
+    padding-bottom: 20px;
+    margin-top: 0;
+  }
+
+  .avatar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+
+  .avatar img {
+    height: 90px;
+    width: 90px;
+  }
+
+  .right-switch {
+    @include text($color: black, $size: 11px);
+    width: 100%;
+    justify-content: center;
+  }
+
+  .profile-infos-left-mid {
+    font-size: 11px;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  .icon-lieu {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .article-card {
+    flex-direction: column;
+  }
+
+  .article-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .article-image img {
+    object-fit: cover;
+  }
+
+  .article-data {
+    padding-left: 10px;
+  }
+
+  .h3_button {
+    display: block;
+    height: auto;
+  }
+
+  .h3_button .article-reserved {
+    margin-left: auto;
+  }
+
+  .pub3 {
+    margin-top: auto;
+  }
+
+  .card-container {
+    flex-direction: column !important;
+  }
+
+  .button-container {
+    width: 100% !important;
+    margin-top: 20px !important;
+  }
+
+  .text-brocante {
+    padding: 1rem !important;
+  }
+
+  .container-brocante {
+    padding: 1rem !important;
+  }
+}
+
+.article-video {
+  width: 150px;
+  height: 120px;
+}
+
+
+// // modal suppression 1
+.modal {
+  background: #00000075;
+}
+
+.modal-content {
+  background: #FFFBEB;
+  border-radius: 20px;
+  padding: 50px;
+  z-index: 9999;
+
+  .modal-header p {
+    @include text($size: 30px, $weight: 700);
+  }
+
+  .modal-body p {
+    @include text($size: 20px, $weight: 400);
+  }
+
+  .group-btn-action {
+    .btn {
+      height: 50px;
+      border-radius: 5px;
+      width: 100%;
+      @include text($color: $color-white, $size: 20px, $weight: 700);
+      display: flex !important;
+      justify-content: center !important;
+    }
+
+    .btn-action-1 {
+      background: $color-blue;
+
+      &:hover {
+        background: $color-blue-light;
+      }
+    }
+
+    .btn-action-2 {
+      border: 2px solid $color-blue;
+      @include text($color: $color-blue, $size: 20px, $weight: 700);
+      text-align: center !important;
+    }
+
+  }
+}
+
+// #requestArticleSuppression2 {
+//   .modal-content {
+//     .modal-body {
+//       select {
+//         height: 50px;
+//         border-color: $color-yellow;
+//         @include text($color: #5C5C5C, $size: 14px, $weight: 400);
+//       }
+
+//       p {
+//         @include text($color: #5C5C5C, $size: 14px, $weight: 700);
+//       }
+//     }
+//   }
+// }
+
+.container-a a {
+  width: 70% !important;
+  margin-bottom: 10px !important;
+}
+
+.btn-update-fleaMarket2 {
+  justify-content: center !important;
+}

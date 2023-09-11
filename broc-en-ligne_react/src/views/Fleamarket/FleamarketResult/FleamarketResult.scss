@@ -1,0 +1,42 @@
+@import "../../../style/index.scss";
+
+
+.fleamarket-result-container {
+    padding-top: 50px;
+}
+
+.result-infos {
+    margin: auto;
+    width: 75%;
+}
+
+.results {
+    display: flex;
+}
+
+.results .fleamarket-listing {
+    width: 80%;
+}
+
+@media (max-width: 992px) {
+    .result-infos {
+        width: 100%;
+    }
+
+    .results .fleamarket-listing {
+        width: 100%;
+    }
+}
+
+
+.search-article-section {
+    width: 1000px;
+    margin: auto;
+    padding: 30px 0;
+
+
+    @media (max-width: 1024px) {
+        position: unset;
+        width: 100%;
+    }
+}
